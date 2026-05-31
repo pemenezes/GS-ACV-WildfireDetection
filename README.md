@@ -60,8 +60,8 @@ indicando sensibilidade ao learning rate com 3 blocos convolucionais.
 ---
 
 ## Demonstração
-🔗 [Aplicação Gradio](https://df733ae4137c3414dd.gradio.live)  
-🎥 [Vídeo demonstrativo](LINK_YOUTUBE)
+🔗 [Aplicação Gradio](https://e3d2144b1a846b700e.gradio.live)  
+🎥 [Vídeo demonstrativo](https://youtu.be/q9VT3i_8AEY)
 
 ---
 
