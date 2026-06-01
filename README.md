@@ -60,7 +60,7 @@ indicando sensibilidade ao learning rate com 3 blocos convolucionais.
 ---
 
 ## Demonstração
-🔗 [Aplicação Gradio](https://e3d2144b1a846b700e.gradio.live)  
+🔗 [Aplicação Gradio](https://huggingface.co/spaces/pemenezzz/wildfire-detection)  
 🎥 [Vídeo demonstrativo](https://youtu.be/q9VT3i_8AEY)
 
 ---
