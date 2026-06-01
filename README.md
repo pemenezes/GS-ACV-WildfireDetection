@@ -71,3 +71,7 @@ orbital (ex: imagens Maxar em escala de cidade inteira), pois o
 dataset de treino é composto majoritariamente por imagens aéreas
 em altitude média. Como trabalho futuro, incluir imagens Sentinel-2
 do INPE no dataset aumentaria a robustez para esse cenário.
+
+---
+Dataset usado para testes:
+[img_para_teste.zip](https://github.com/user-attachments/files/28483141/img_para_teste.zip)
