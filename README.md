@@ -132,6 +132,9 @@ src="https://github.com/user-attachments/assets/e7e1b9cf-2c77-4ab5-a097-b4ea9a50
 Para testar o modelo localmente com imagens próprias, use o arquivo:  
 📦 [img_para_teste.zip](https://github.com/user-attachments/files/28483141/img_para_teste.zip)
 
+para acessar o arquivo que contem os pesos do melhor modelo :
+https://drive.google.com/file/d/1dzgASUZcRobdMdYHts153cFQl6ha-GMr/view?usp=sharing
+
 ---
 
 ## Limitações
