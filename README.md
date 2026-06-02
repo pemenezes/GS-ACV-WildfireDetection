@@ -124,13 +124,69 @@ src="https://github.com/user-attachments/assets/e7e1b9cf-2c77-4ab5-a097-b4ea9a50
 
 ## Como executar
 
-1. Abra o notebook `GS_ACV.ipynb` no Google Colab
-2. Ative a GPU: `Ambiente de execução → Alterar tipo → T4 GPU`
-3. Execute as células em ordem — o dataset é baixado automaticamente via Kaggle API
-4. As dependências necessárias são: `torch` `torchvision` `Pillow` `matplotlib` `scikit-learn` `gradio`
+### Pré-requisitos
+
+- Conta no **Google** (para usar o Google Colab + Google Drive)
+- Conta no **Kaggle** com token de API gerado
+
+### Passo a passo
+
+**1. Obter o token da Kaggle API**
+
+Acesse `kaggle.com` → Settings → API Tokens → **Create New API Token**.  
+Isso gera o seu `username` e `key` pessoais.
+
+**2. Abrir o notebook no Google Colab**
+
+Abra o arquivo `GS_ACV.ipynb` no Google Colab.
+
+**3. Ativar a GPU**
+
+`Ambiente de execução → Alterar tipo de ambiente de execução → T4 GPU`
+
+**4. Executar as células em sequência**
+
+> ⚠️ **Atenção:** as células abaixo precisam ser configuradas com seus próprios dados antes de executar.
+
+**Célula de configuração do Kaggle** — substitua com seu username e key:
+```python
+kaggle_config = {
+    "username": "SEU_USERNAME_KAGGLE",  # ← substitua aqui
+    "key": "SUA_KEY_KAGGLE"             # ← substitua aqui
+}
+```
+
+**Célula de montagem do Drive** — ao executar, autorize o acesso à **sua** conta Google.  
+Os modelos treinados serão salvos na sua Drive em `/GS_ACV/`.
+
+**5. Sobre o treinamento**
+
+As células de treino estão **comentadas** no notebook porque os modelos já foram treinados.  
+Para re-treinar do zero, descomente as linhas finais da célula de treino:
+
+```python
+historico_simple = treinar_modelo(SimpleFireNet(NUM_CLASSES), "SimpleFireNet")
+historico_deep   = treinar_modelo(DeepFireNet(NUM_CLASSES),   "DeepFireNet")
+```
+
+> ⚠️ O treino completo leva aproximadamente **3 a 4 horas** com GPU T4.  
+> Sem re-treinar, as células de avaliação e o Gradio não funcionarão pois os  
+> arquivos `.pth` estão no Drive do autor original.
+
+**6. Dependências**
+
+Instaladas automaticamente pelo Colab: `torch` `torchvision` `Pillow` `matplotlib` `scikit-learn` `gradio`
+
+---
+
+## Testar o modelo no gradio
 
 Para testar o modelo localmente com imagens próprias, use o arquivo:  
 📦 [img_para_teste.zip](https://github.com/user-attachments/files/28483141/img_para_teste.zip)
+
+---
+
+## Acessar arquivo com pesos do modelo
 
 para acessar o arquivo que contem os pesos do melhor modelo :
 https://drive.google.com/file/d/1dzgASUZcRobdMdYHts153cFQl6ha-GMr/view?usp=sharing
